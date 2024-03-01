@@ -1,0 +1,55 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(248, 248, 255, 0.585);
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: 'Gambetta', serif;
+    letter-spacing: -3px;
+    transition: 700ms ease;
+    font-variation-settings: "wght" 311;
+    margin-bottom: 0.8rem;
+    color: rgb(2, 2, 2);
+    outline: none;
+    text-align: center;
+}
+
+h1:hover {
+    font-variation-settings: "wght" 582; 
+    letter-spacing: 1px;
+  }
+
+.opcion{
+    background-color: rgb(76, 120, 195);
+    border: 1px solid #070606;
+    text-align: center;
+    padding: 20px;
+    flex-grow: 1; /*Hace que sean todos iguales de tamaño*/
+    margin: 10px;
+    transition: 0.6s ease-in-out;
+    font-size: 14px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#menu{
+    display: flex;
+    flex: wrap;
+}
+
+.opcion:hover{
+    background-color: rgb(195, 159, 112) ;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 8px 9px 22px -8px rgba(0,0,0,0.72);
+    -webkit-box-shadow: 8px 9px 22px -8px rgba(0,0,0,0.72);
+    -moz-box-shadow: 8px 9px 22px -8px rgba(0,0,0,0.72);
+
+}

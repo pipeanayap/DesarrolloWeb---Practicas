@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones</title>
+    <style>
+        body{
+            animation: colores 10s infinite;
+        }
+
+
+
+        @keyframes colores{
+            0%{
+                background-color: red;
+            }
+            
+            25%{
+                background-color: yellow;
+            }
+
+            50%{
+                background-color: green;
+            }
+
+            75%{
+                background-color: aqua;
+            }
+
+            100%{
+                background-color: blue;
+            }
+        }
+
+        .CuadroBlanco{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            position: fixed;
+            top: 250px;
+            left: 650px;
+            animation: mover 2s infinite;
+        }
+
+        .CuadroBlanco2{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            position: fixed;
+            top: 250px;
+            left: 650px;
+            animation: mover2 2s infinite;
+        }
+
+        .CuadroBlanco3{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            position: fixed;
+            top: 250px;
+            left: 650px;
+            animation: mover3 2s infinite;
+        }
+
+        .CuadroBlanco4{
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            position: fixed;
+            top: 250px;
+            left: 650px;
+            animation: mover4 2s infinite;   
+        }
+
+        @keyframes mover{
+            from {
+                left: 50px;
+                top: 0px;
+            }
+
+            to {
+                left: 50px;
+                top: 500px;
+            
+            }
+        
+        }
+
+        @keyframes mover2{
+            from {
+                right: 0px;
+                top: 0px;
+            }
+
+            to {
+                right: 0px;
+                top: 500px;
+            
+            }
+        }
+
+        @keyframes mover3{
+            from {
+                left: 50px;
+                top: 500px;
+            }
+
+            to {
+                left: 50px;
+                top: 0px;
+            
+            }
+        
+        }
+
+        @keyframes mover4{
+            from {
+                right: 0px;
+                top: 500px;
+            }
+
+            to {
+                right: 0px;
+                top: 0px;
+            
+            }
+        }
+        
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="CuadroBlanco"></div>
+    <div class="CuadroBlanco2"></div>
+    <div class="CuadroBlanco3"></div>
+    <div class="CuadroBlanco4"></div>
+</body>
+</html>
