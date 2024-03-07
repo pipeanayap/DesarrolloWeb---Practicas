@@ -1,0 +1,29 @@
+
+        body{
+            font-family: "Ropa Sans", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        
+        .form-control {
+                border-radius: 0; /* Elimina el borde redondeado */
+                background-color: #EAEAEA;
+        }
+
+        .search-icon {
+            width: 20px; /* Ancho del ícono de búsqueda */
+            height: auto; /* Altura ajustada automáticamente */
+        }
+            
+        .icon-container {
+            margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
+        }
+    
+        .icon-container i {
+            font-size: 1.5rem; /* Ajusta el tamaño del icono según sea necesario */
+        }
+
+        
+
+       
