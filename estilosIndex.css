@@ -1,0 +1,75 @@
+body {
+    padding-top: 3rem;
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #007bff;
+    
+}
+
+h1:hover{
+    animation: shake 0.5s ease infinite; 
+    color: #0056b3;
+    transform: translateY(-5px);
+    }
+
+.practice-link {
+    text-align: center;
+    animation: fadeInUp 1s ease;
+}
+.practice-link a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: 2px solid #007bff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.practice-link a:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
