@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+</head>
+<body>
+    <h1> Practica No.13 | JS</h1>
+    <p id="nombreCompleto"> Este es un parrafo </p>
+
+
+
+    <script>
+        let miVariable = 10;//number-entero
+         miVariable = 30;//number-entero
+        let numero = 10;//number-entero
+        let texto = "Hola mundo";//string
+        let edad = 25;
+        
+        console.log(texto);
+        console.log(miVariable, numero);
+        console.log("Resultado en consola:", miVariable);
+
+        function muestraEdad(miEdad){
+            edad = miEdad * 10;
+            return "edad fun:" + edad;
+        } //Scope 
+
+        console.log(muestraEdad(edad))
+        console.log("edad: " + edad);
+
+        const PI = 3.1416;  //Constante, number, float 
+
+        function areaCirculo(radio){
+            return PI * radio * radio
+        }
+
+        console.log("El area del circulo es de: " + areaCirculo(5));
+
+        function saludar(nombre){
+            return "Hola " + nombre;
+
+        }
+
+        //camelCase - nuevoNombre
+        //pascalCase - NuevoNombre
+        //snake_case - nuevo_nombre
+        //kebab-case - nuevo-nombre //NO PERMITIDO EN JS 
+        let nuevoNombre = "Pipin"
+        console.log(saludar(nuevoNombre))
+
+        let estado = true; //Boolean
+        let otroEstado = false; //Boolean
+        let arreglo = [1,2,3,4,5]; //Array
+        let arreglo2 = ["Python", "Java", "JS"]; //Array
+        let arreglo3 = [1, "Python", true]; //Array
+        
+        let arregloBooleanos = [true, false, true, false, true]; //Array
+
+        console.log(arreglo[-1]) //no funciona esto para obtener el ultimo valor del arreglo 
+
+
+        let nulo = null; 
+
+        console.log("Resultado de nulo  "+ nulo);
+
+        let nombre = "Pipin";
+        let apellido = "Anaya";
+        let nombreCompleto = nombre + " " + apellido;
+        console.log(nombreCompleto)
+
+        let nombreEnPantalla = document.getElementById("nombreCompleto");
+        nombreEnPantalla.innerHTML = nombreCompleto
+
+
+
+    </script>
+
+</body>
+</html>
