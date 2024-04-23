@@ -50,3 +50,27 @@ function multiplicarNumeros(x, y){
 
 let resultado = multiplicarNumeros(x,y);
 console.log(resultado);
+
+
+
+function calcularAreaCirculo(radio) { 
+    /* const pi = 3.1416;
+    let area = pi * radio**2; */
+    //let area = Math.PI * Math.pow(radio,2)
+    return Math.PI * Math.pow(radio,2)
+}
+
+console.log("El area es de " + calcularAreaCirculo(10))
+
+
+let hello = () =>{
+    return "hello world! con funcion flecha "
+}
+
+let flecha = (a,b) => a + b + 100;
+let edadx2 = (edad) => edad * 2;
+
+console.log(flecha(10,10))
+console.log("Tu edad multiplicada por 2 es de " + edadx2(20 ))
+
+
