@@ -25,7 +25,7 @@ for(let propiedad in persona2 ){
 }
 
 
-let marcas = ["Porsche", "Ferrari", "Lamborghini", "Audi"];
+let marcas = ["Masserati", "Peugeot", "Mercedes Benz", "Baic"];
 
 let lista = document.getElementById("lista");
 lista.innerHTML = "";
