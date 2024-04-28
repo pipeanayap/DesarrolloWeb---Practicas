@@ -1,8 +1,8 @@
 let j = 500;
-let nombre = "Peyton";
+let nombre = "Pipe";
 for(let j =10; j<=20; j++){
     console.log(j);
-    let nombre = "Denisse";
+    let nombre = "pipe";
     console.log("Mi nombre dentro del ciclo es:",nombre);
 }
 
@@ -12,12 +12,12 @@ console.log("Mi nombre fuera del ciclo es:",nombre);
 const PI = Math.PI;
 console.log(PI);
 
-const persona = { nombre : "Peyton", edad : 20, sexo : "F", casado: true};
+const persona = { nombre : "Pipe", edad : 19, sexo : "M", casado: false};
 console.log(persona);
 
 const persona2 = { 
-    nombre : "Denisse",
-    edad : 20, sexo : "F", 
+    nombre : "  Pipe",
+    edad : 19, sexo : "M", 
     casado: true};
 
 for(let propiedad in persona2 ){
