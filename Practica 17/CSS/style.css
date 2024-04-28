@@ -1,0 +1,70 @@
+.galeria-img-container {
+    margin-bottom: 20px; /* Espacio entre cada imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Ocultar cualquier desbordamiento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 1s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    
+  }
+
+  .galeria-img-container:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  }
+
+  .galeria-img-container img {
+    width: 100%; /* Para que la imagen ocupe todo el espacio disponible */
+    transition: transform 1s ease; /* Transición suave */
+    border-radius: 20px;
+  }
+
+  .galeria-img-container:hover img {
+    transform: scale(1.05); /* Aumentar tamaño al pasar el cursor */
+    border-radius: 30px;
+  }
+
+  .galeria-titulo {
+    padding: 0.5rem; /* Relleno para espacio interno */
+    border-top-left-radius: 10px; /* Bordes redondeados en la esquina superior izquierda */
+    border-top-right-radius: 10px; /* Bordes redondeados en la esquina superior derecha */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white; /* Color de texto blanco */
+    margin: 0; /* Eliminar márgenes */
+  }
+
+   /* Estilos para el modal */
+   .modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed; /* Posición fija para que se superponga sobre el contenido */
+    z-index: 1; /* Situar el modal por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permitir desplazamiento si el contenido del modal es demasiado grande */
+    background-color: rgba(0,0,0,0.8); /* Fondo semi-transparente */
+  }
+
+  /* Contenido del modal */
+  .modal-contenido {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+  }
+
+  /* Botón de cerrar */
+  .cerrar {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  /* Cuando se pasa el ratón sobre el botón de cerrar */
+  .cerrar:hover,
+  .cerrar:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

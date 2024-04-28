@@ -36,15 +36,15 @@ for (let marca of marcas){
 
 
 
-let peliculas = [
-    {titulo: "Leaning Tower of Pisa", imagen: "https://i.pinimg.com/564x/f6/8d/12/f68d12883010053c363a19e27b1e66f3.jpg"},
-    {titulo: "Trevi Fountain, Roma, Italy", imagen: "https://i.pinimg.com/564x/12/a0/f7/12a0f79fbc046139158300b8dbff41a8.jpg"},
-    {titulo: "The Colisseum, Roma, Italy", imagen: "https://i.pinimg.com/564x/93/ad/e4/93ade4d62d97a5dc90c0312a134c778a.jpg"},
-    {titulo: "Winged Victory of Samothrace", imagen: "https://i.pinimg.com/564x/70/a1/90/70a190b206afeca909d1784ed4d02c87.jpg"},
-    {titulo: "Arco da Rua Augusta", imagen: "https://i.pinimg.com/564x/80/a2/d0/80a2d08e7800d7fc01d37c8a065ace31.jpg"},
-    {titulo: "Eiffel Tower, París", imagen: "https://i.pinimg.com/564x/65/55/d7/6555d7eea0223fb6582836b2e676288c.jpg"},
-    {titulo: "David, Miguel Angel", imagen: "https://i.pinimg.com/564x/4e/e0/56/4ee05677f392ce8d700f173f0ed9b6f0.jpg"},
-    {titulo: "Cupid and Psyche in the Louvre", imagen: "https://i.pinimg.com/564x/b9/82/6c/b9826c12a248db97553450fc098b15b8.jpg"},
+let videojuegos = [
+    {titulo: "GTA V", imagen: "https://i.pinimg.com/564x/5e/6a/cf/5e6acf9e03b48f5ed16ac41ed129de53.jpg"},
+    {titulo: "Half life 2", imagen: "https://i.pinimg.com/564x/57/1f/8a/571f8a68b433761353a9acd28f318e47.jpg"},
+    {titulo: "Bioshock", imagen: "https://i.pinimg.com/564x/88/db/c7/88dbc788f3c2a8f7f15ae5e931fdbd49.jpg"},
+    {titulo: "Red Dead Redemption 2", imagen: "https://i.pinimg.com/564x/92/08/24/92082413f057c566f6f94466e82c5449.jpg"},
+    {titulo: "The legend of zelda: Breath of the wild", imagen: "https://i.pinimg.com/564x/1c/05/42/1c05428c3ab99b0203e2ae8d6f4f97c1.jpg"},
+    {titulo: "Metroid Prime", imagen: "https://i.pinimg.com/564x/a3/70/47/a37047575a5c747b788623d848b1272a.jpg"},
+    {titulo: "The Witcher 3", imagen: "https://i.pinimg.com/564x/79/33/0c/79330c731e898938f676c9b8f1f9bb77.jpg"},
+    {titulo: "Street Fighter 3", imagen: "https://i.pinimg.com/564x/0b/11/8e/0b118e5edd57f55aecfaf6c8c721157f.jpg"},
 
 
 
@@ -52,9 +52,13 @@ let peliculas = [
 
 let galeria = document.getElementById("galeria");
 galeria.innerHTML = "";
-for (let pelicula of peliculas){
-    console.log(pelicula);
-    galeria.innerHTML += `<div class='col-12 col-md-3 text-center'><p class=text-danger>${pelicula.titulo}</p><img src='${pelicula.imagen}' alt='Imagen de ${pelicula.titulo}' class='img-fluid'></div>`;
+for (let juego of videojuegos){
+    console.log(juego);
+    galeria.innerHTML += `
+  <div class='col-12 col-md-3 text-center galeria-img-container'>
+    <p class='text-danger galeria-titulo' style='background-color: transparent;'>${juego.titulo}</p>
+    <img src='${juego.imagen}' alt='Imagen de ${juego.titulo}' class='img-fluid'>
+  </div>`;
 }
 j = 1;
 
@@ -70,3 +74,38 @@ do{
     i = i + 1;
     result = result +1
 }while(i < 5)
+
+ // Obtener el modal
+ var modal = document.getElementById("modal");
+
+ // Obtener la imagen y establecer el src de la imagen modal
+ var imgModal = document.getElementById("imagenModal");
+
+ // Función para abrir el modal con la imagen correspondiente
+ function abrirModal(imagenSrc) {
+   modal.style.display = "block";
+   imgModal.src = imagenSrc;
+ }
+
+ // Cuando se haga clic en la X (cerrar), cerrar el modal
+ var cerrar = document.getElementsByClassName("cerrar")[0];
+ cerrar.onclick = function() {
+   modal.style.display = "none";
+ };
+
+ // Cuando se haga clic fuera del modal, cerrar el modal
+ window.onclick = function(event) {
+   if (event.target == modal) {
+     modal.style.display = "none";
+   }
+ };
+
+ // Obtener todas las imágenes de la galería
+ var imagenes = document.querySelectorAll(".galeria-img-container img");
+
+ // Agregar un evento de clic a cada imagen para abrir el modal
+ imagenes.forEach(function(imagen) {
+   imagen.addEventListener("click", function() {
+     abrirModal(this.src);
+   });
+ });
