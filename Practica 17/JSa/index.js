@@ -13,7 +13,7 @@ const PI = Math.PI;
 console.log(PI);
 
 const persona = { nombre : "Pipe", edad : 19, sexo : "M", casado: false};
-console.log(persona);
+console.log(persona);TA
 
 const persona2 = { 
     nombre : "  Pipe",
