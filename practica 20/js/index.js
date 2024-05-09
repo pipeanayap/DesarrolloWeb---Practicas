@@ -10,13 +10,19 @@ function asignar(valor){
 function calcular() {
     if (resultado.value !== ''){
         let expresion = resultado.value;
+
+        // Reemplazar paréntesis sin operador explícito entre ellos con un operador de multiplicación *
         expresion = expresion.replace(/\)\(/g, ')*(');
+        
+        // Manejar casos de multiplicación implícita (como 3(9))
+        expresion = expresion.replace(/(\d+)\(/g, '$1*(');
+
+        // Evaluar la expresión
         resultado.value = eval(expresion);
         resultadoCalculado = true;
-    }else {
+    } else {
         alert('Ingrese una operación');
     }
-    
 }
 
 
