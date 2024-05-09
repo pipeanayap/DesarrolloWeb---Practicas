@@ -26,8 +26,8 @@ let resultado = `El resultado de la suma es ${a} + ${b} es ${a + b}`;
 console.log(resultado)
 lista.innerHTML = resultado;
 
-let persona = 'Pablo'
-let edad = 28
+let persona = 'pipe'
+let edad = 19;
 cadena = "my name is";
 
 function myFunction(cadena, personaX, edadExp){
@@ -54,8 +54,8 @@ function mostrarNombre(name){
 
 let resultado2 = mostrarNombre `Raul`;
 
-let titulo = "Ganadores de los oscares 2024";
-let cantantes = ["Billie Eilish","Lady Gaga", "Adele"];
+let titulo = "Mejores musicos argentinos";
+let cantantes = ["Nicki Nicole","Milo J ", "Duki"];
 let cadenaHTML = `<h1>${titulo}</h1>`
 
 cadenaHTML += `<ul>`
