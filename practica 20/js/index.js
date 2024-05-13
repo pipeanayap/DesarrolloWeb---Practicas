@@ -46,8 +46,69 @@ function raiz() {
     resultado.value = Math.sqrt(resultado.value);
 }
 
+function caritaFeliz(){
+    resultadoCalculado = true;
+    resultado.value = "Te amo"
+}
+
+function caritaTriste(){
+    resultadoCalculado = true;
+    resultado.value = "Te odio"
+}
+
+function factorial() {
+    let num = resultado.value;
+    let result = 1;
+    for (let i = 1; i <= num; i++) {
+        result *= i;
+    }
+    resultado.value = result;
+    resultadoCalculado = true;
+}
+
+function cerrarCientifica() {
+    // Remover la clase de la calculadora para volver a su tamaño original
+    document.querySelector('.calculator').classList.remove('calculator-ampliada');
+    document.querySelector('.calculator').classList.remove('buttons-ampliados');
+    // Ocultar los botones adicionales de funciones trigonométricas
+    let botonesDesplegables = document.querySelectorAll('#desplegables');
+    botonesDesplegables.forEach(function(boton) {
+        boton.style.display = 'none';
+    });
+}
+
+// Modifica la función abrirCientifica para que también llame a la función cerrarCientifica
+function abrirCientifica() {
+    // Si la calculadora ya está ampliada, se cierra
+    if (document.querySelector('.calculator').classList.contains('calculator-ampliada')) {
+        cerrarCientifica();
+        // Cambiar el texto del botón a "Normal"
+        document.getElementById("cientific").innerText = "Científica";
+    } else {
+        // De lo contrario, se expande
+        document.querySelector('.calculator').classList.add('calculator-ampliada');
+        document.querySelector('.calculator').classList.add('buttons-ampliados');
+        // Mostrar los botones adicionales de funciones trigonométricas
+        let botonesDesplegables = document.querySelectorAll('#desplegables');
+        botonesDesplegables.forEach(function(boton) {
+            boton.style.display = 'inline-block';
+        });
+        // Cambiar el texto del botón a "Normal"
+        document.getElementById("cientific").innerText = "Normal";
+    }
+}
 
 
-//RETO HACER CALCULADORA CIENTIFICA -- MINIMO 3 OPERACIONES  
 
+
+
+
+
+
+
+
+
+
+
+//RETO HACER CALCULADORA CIENTIFICA -- MINIMO 3 OPERACIONES 
 
