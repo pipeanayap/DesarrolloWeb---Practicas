@@ -9,6 +9,19 @@
   transition: all 0.3s ease; /* Agregamos transición para suavizar el cambio de tamaño */
 }
 
+.historial {
+  border: 1px solid rgb(179, 179, 179);
+  border-radius: 0.375rem;
+  width: 80%; /* Utilizamos porcentaje en lugar de píxeles */
+  max-width: 400px; /* Establecemos un ancho máximo */
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 10px;
+  transition: all 0.3s ease; /* Agregamos transición para suavizar el cambio de tamaño */
+  margin-top: 5px; 
+  text-align:center!
+}
+
 .calculator-ampliada {
   width: 90%; /* Ajustamos el ancho para la versión ampliada */
   max-width: 720px; /* Ancho máximo para la versión ampliada, que permita 8 botones por fila */

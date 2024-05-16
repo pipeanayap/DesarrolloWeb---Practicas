@@ -1,5 +1,6 @@
 let resultado = document.getElementById("resultado");
 let resultadoCalculado = false; 
+arregloHistorial = []
 
 function asignar(valor){
     resultado.value += valor;   
@@ -18,12 +19,39 @@ function calcular() {
         expresion = expresion.replace(/(\d+)\(/g, '$1*(');
 
         // Evaluar la expresión
-        resultado.value = eval(expresion);
-        resultadoCalculado = true;
+        let resultadoCalculado = eval(expresion);
+
+        // Concatenar la expresión original y el resultado calculado para imprimir
+        let temporal = expresion + " = " + resultadoCalculado;
+
+        // Llamar a la función para imprimir
+        imprimirResultado(temporal);
+
+        // Asignar el resultado a la caja de texto
+        resultado.value = resultadoCalculado;
+
     } else {
         alert('Ingrese una operación');
     }
 }
+
+function imprimirResultado(temporal){
+    let impresiones = document.getElementById('impresiones');
+    arregloHistorial.push(temporal);
+
+    impresiones.innerHTML = "";
+
+    arregloHistorial.forEach((temporal) => {
+        impresiones.innerHTML += `
+        <div style="text-align: center;">
+            <strong>${temporal}</strong>
+        </div>
+        `;
+    });
+    
+    console.log(arregloHistorial);
+}
+
 
 
 function limpiar() {
@@ -37,7 +65,9 @@ function limpiar() {
 
 function potencia(){
     resultadoCalculado = true;
+     // Llamar a la función para imprimir
     resultado.value = Math.pow(resultado.value,2)
+
 
 }
 
