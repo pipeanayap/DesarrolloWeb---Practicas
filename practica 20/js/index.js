@@ -9,31 +9,32 @@ function asignar(valor){
 }
 
 function calcular() {
-    if (resultado.value !== ''){
+    if (resultado.value !== '') {
         let expresion = resultado.value;
-
-        // Reemplazar paréntesis sin operador explícito entre ellos con un operador de multiplicación *
         expresion = expresion.replace(/\)\(/g, ')*(');
-        
-        // Manejar casos de multiplicación implícita (como 3(9))
         expresion = expresion.replace(/(\d+)\(/g, '$1*(');
 
-        // Evaluar la expresión
-        let resultadoCalculado = eval(expresion);
-
-        // Concatenar la expresión original y el resultado calculado para imprimir
-        let temporal = expresion + " = " + resultadoCalculado;
-
-        // Llamar a la función para imprimir
-        imprimirResultado(temporal);
-
-        // Asignar el resultado a la caja de texto
-        resultado.value = resultadoCalculado;
-
+        try {
+            let resultadoCalculado = eval(expresion);
+            if (!isNaN(resultadoCalculado)) {
+                let temporal = expresion + " = " + resultadoCalculado;
+                imprimirResultado(temporal);
+                resultado.value = resultadoCalculado;
+            } else {
+                throw new Error('Error: Operación no válida');
+            }
+        } catch (error) {
+            alert(error.message);
+            // Limpiar el historial si ocurre un error
+            arregloHistorial = [];
+            document.getElementById('impresiones').innerHTML = "";
+            resultado.value = ''; // Limpiar la caja de texto
+        }
     } else {
         alert('Ingrese una operación');
     }
 }
+
 
 function imprimirResultado(temporal){
     let impresiones = document.getElementById('impresiones');

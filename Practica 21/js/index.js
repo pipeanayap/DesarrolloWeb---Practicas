@@ -3,6 +3,7 @@ let nombre = document.getElementById('nombre');
 let fecha = document.getElementById('fecha');
 let descripcion = document.getElementById('descripcion');
 let listaTareas = document.getElementById('listaTareas');
+let btnGuardar = document.getElementById('btnGuardar');
 let tareas = [
     {
         nombre : "Hugo",
@@ -24,9 +25,18 @@ let tareas = [
 formulario.addEventListener("submit", (e) => {
     e.preventDefault(); //PREVIENE QUE SE RECARGUE LA PAGINA 
     agregarDatos();
+    mostrarTareas();
+    cerrarModal();
+    formulario.reset()
     
 });
-   
+
+let cerrarModal = () =>{
+    btnGuardar.setAttribute("data-bs-dismiss","modal");
+    btnGuardar.click()
+}
+
+
 let agregarDatos = () => {
     console.log('Entro a la funcion agregarDatos');
     let tarea={
@@ -40,6 +50,8 @@ let agregarDatos = () => {
 
 let mostrarTareas = () => {
     
+    listaTareas.innerHTML = "";
+
     tareas.forEach((tarea, indice) => {
         listaTareas.innerHTML += `
             <div class="row mt-5">
@@ -53,8 +65,8 @@ let mostrarTareas = () => {
                     <strong>${tarea.descripcion}</strong>
                 </div>
                 <div class="col-12 col-md-3 border p-3  text-center">
-                    <button class="btn btn-outline-primary">Editar</button>
-                    <button class="btn btn-outline-secondary">Borrar</button>
+                    <button class="btn btn-outline-primary"><i class="bi bi-pencil-fill"></i>&nbsp;&nbsp;Editar</button>
+                    <button class="btn btn-outline-secondary"><i class="bi bi-trash3-fill"></i>&nbsp;Borrar</button>
                 </div>
             </div>
         `
