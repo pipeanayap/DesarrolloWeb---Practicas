@@ -51,3 +51,8 @@
 }
  
 
+.task-image {
+    max-width: 100%;
+    max-height: 200px; /* Ajusta esta altura según tus necesidades */
+    object-fit: cover;
+}
