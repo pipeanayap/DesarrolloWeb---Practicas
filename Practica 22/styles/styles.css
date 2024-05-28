@@ -3,9 +3,10 @@
 /* completely redone toggle and droid */
 
 .imagenProducto {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  object-fit: contain;
   display: block;
   margin: 0px auto;
 }
@@ -993,3 +994,84 @@
   background-color: #ffffff;
   color: #121212;
 }
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.modal-content.dark-mode {
+  background-color: #2c2c2c;
+  color: #ffffff;
+}
+
+.dark-mode .btn-close {
+  filter: invert(1);
+}
+
+.carrrrito {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 10px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-right: 25px;
+ }
+ 
+ .carrrrito:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+ }
+ 
+ .carrrrito:main, .carrrrito:focus {
+  user-select: auto;
+ }
+ 
+ .carrrrito:hover:not(:disabled) {
+  filter: brightness(1.1);
+ }
+ 
+ .carrrrito:disabled {
+  cursor: auto;
+ }
+ 
+ .carrrrito:active:after {
+  border-width: 0 0 0px;
+ }
+ 
+ .carrrrito:active {
+  padding-bottom: 10px;
+ }
+
+ 
