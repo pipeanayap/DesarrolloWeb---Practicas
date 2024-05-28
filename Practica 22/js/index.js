@@ -3,7 +3,6 @@
 let listaProductos = document.querySelector('#listaProductos');
 let categorieList = document.querySelector('#categorieList');
 let carrito = [];
-
 const URL = "https://fakestoreapi.com/products";
 const URL2 = "https://fakestoreapi.com/products/categories";
 
@@ -21,8 +20,8 @@ fetch(URL)
                         <div class="card-body">
                              <h5 class="card-title">${producto.title.slice(0,30)}</h5>
                              <p class="card-text">${producto.description.slice(0,80)}</p>
-                             <p class="card-text text-danger">${producto.price}</p>
-                             <a href="#" class="btn btn-outline-primary w-100">Comprar</a>
+                             <p class="card-text text-danger">$ ${producto.price}</p>
+                             <a href="#" class="btn btn-outline-primary w-100">Agregar al carrito</a>
                         </div>
                     </div>
                 </div>
@@ -42,7 +41,7 @@ fetch(URL2)
 
         data.forEach((categoria, indice) => {
             categorieList.innerHTML += `
-            <a class="nav-link" href="${categoria}.html">${categoria}</a>
+            <a class="nav-link" id="categorias">${categoria}</a>
             `; 
         });
 

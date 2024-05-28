@@ -2,6 +2,18 @@
 /* RTX-ON */
 /* completely redone toggle and droid */
 
+.imagenProducto {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0px auto;
+}
+
+#categorias:hover{
+  cursor: pointer ;
+}
+
 .bb8-toggle {
   --toggle-size: 8px;
   /* finally I removed the scale now everything depends on the font-size */
