@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                             <p class="card-text text-danger">$ ${producto.price}</p>
                             <a href="#" class="btn btn-outline-primary w-100" data-id="${producto.id}">Agregar al carrito</a>
                         </div>
-                    </div>
+                    </div>  
                 </div>
             `;
         });
