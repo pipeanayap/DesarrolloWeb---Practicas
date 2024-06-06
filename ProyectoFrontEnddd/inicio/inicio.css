@@ -1,0 +1,44 @@
+#logotipo{
+    width:28px ;
+    height: 41px;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    
+}
+
+.card {
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100px; /* Ajusta el tamaño de las imágenes */
+    height: 100px; /* Ajusta el tamaño de las imágenes */
+    object-fit: contain;
+    margin: 10px auto; /* Centra la imagen horizontalmente */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 1.5rem;
+    color: #007bff;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}

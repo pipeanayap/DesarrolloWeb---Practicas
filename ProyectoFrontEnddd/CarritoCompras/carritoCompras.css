@@ -1,0 +1,41 @@
+#logotipo{
+    width:28px ;
+    height: 41px;
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    
+}
+
+.container-borders {
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#carritoIcono {
+    width: 500px; /* Ajusta el ancho del ícono del carrito */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.card {
+    width: 100%; /* Ajusta el tamaño de las tarjetas */
+    margin-bottom: 10px;
+}
+
+.card img {
+    max-height: 100px; /* Ajusta la altura máxima de las imágenes */
+    max-width: 100px; /* Ajusta el ancho máximo de las imágenes */
+    object-fit: contain;
+    margin: 10px auto; /* Centra la imagen horizontalmente y aplica margen superior e inferior */
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

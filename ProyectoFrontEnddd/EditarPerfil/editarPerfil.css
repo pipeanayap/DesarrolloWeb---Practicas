@@ -1,0 +1,13 @@
+
+        .profile-icon {
+            width: 100px; /* Ajusta el ancho del ícono */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+    
+        #logotipo{
+            width:28px ;
+            height: 41px;
+            filter: brightness(1.1);
+            mix-blend-mode: multiply;
+            
+        }

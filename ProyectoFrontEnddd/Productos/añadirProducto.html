@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Producto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="productos.css">
+</head>
+<body>
+  <nav class="navbar bg-primary navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../imagenes/logotipo.png" id="logotipo" alt="logotipo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li>
+                    <form class="d-flex mt-2" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../Categorias/categorias.html">Categorias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../CarritoCompras/index.html">Carrito de compras</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../EditarPerfil/editarPerfil.html">Editar perfil</a>
+                </li>
+                <li class="nav-item vendedor-only admin-only" style="display: none;">
+                  <a class="nav-link active" href="../Productos/añadirProducto.html">Añadir Producto</a>
+              </li>
+              <li class="nav-item vendedor-only admin-only" style="display: none;">
+                <a class="nav-link active" href="../Productos/editarProducto.html">Modificar Producto</a>
+              </li>
+              <li class="nav-item admin-only" style="display: none;">
+                <a class="nav-link active" href="../Productos/eliminarProducto.html">Eliminar Producto</a>
+              </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="../CerrarSesion/cerrarSesion.html">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="container container-borders mt-4">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <h1>Añadir Producto</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center mt-3">
+            <div class="coolinput">
+                <label for="input" class="form-label">Nombre:</label>
+                <input type="text" placeholder="Escribe aquí..." name="input" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center mt-3">
+            <div class="coolinput">
+                <label for="password" class="form-label">Descripcion:</label>
+                <input type="password" placeholder="Escribe aquí..." name="password" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center mt-3">
+            <div class="coolinput">
+                <label for="password" class="form-label">Precio:</label>
+                <input type="password" placeholder="Escribe aquí..." name="password" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 d-flex justify-content-center mt-3">
+            <div class="coolinput">
+                <label for="password" class="form-label">Categoria:</label>
+                <input type="password" placeholder="Escribe aquí..." name="password" class="form-control">
+            </div>
+        </div>
+        <div class="col-12 text-center mt-4">
+            <a href="../inicio/inicio.html">
+                <button type="button" class="btn btn-primary">Save</button>
+            </a>
+           
+        </div>
+    </div>
+    
+
+    <script src="carritoCompras.js"></script>
+    <script src="../roles.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
